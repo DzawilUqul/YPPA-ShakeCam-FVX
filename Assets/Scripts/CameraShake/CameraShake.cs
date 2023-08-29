@@ -9,13 +9,15 @@ public class CameraShake : MonoBehaviour
     public Transform camTransform;
 
     // How long the object should shake for.
-    public float shakeDuration;
+    public float duration;
 
     // Amplitude of the shake. A larger value shakes the camera harder.
-    public float power;
+    public float magnitude;
     public float decreaseFactor;
 
     Vector3 originalPos;
+
+    public ShakeCamera shakeCamera;
 
     // if null.
     void Awake() {
@@ -31,8 +33,8 @@ public class CameraShake : MonoBehaviour
 
     void Update() {
 
-        if (Input.GetKey(KeyCode.Space)) {
-            ActionCam.CamShake(shakeDuration, power, decreaseFactor, camTransform, originalPos);
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            shakeCamera.StartCameraShake(duration, magnitude, decreaseFactor, camTransform, originalPos);
         }
 
     }
