@@ -9,7 +9,7 @@ public class CapsuleMovement : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -34,13 +34,13 @@ public class CapsuleMovement : MonoBehaviour
         // Attack VFX
         if (Input.GetKey(KeyCode.Q))
         {
-            
+
         }
 
         // Skill VFX
         if (Input.GetKey(KeyCode.X))
         {
-            
+
         }
     }
 }
