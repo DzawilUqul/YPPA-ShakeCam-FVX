@@ -11,7 +11,8 @@ public class CapsuleInput : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            shakeCamera.StartCameraShake(1, 0.05f, 1, cam.transform, cam.transform.localPosition);
+            CinemachineShake.Instance.shakeCamera(3f, 0.25f);
+            // shakeCamera.StartCameraShake(1, 0.05f, 1, cam.transform, cam.transform.localPosition);
         }
     }
 }
