@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CapsuleInput : MonoBehaviour
 {
-    [SerializeField] private ShakeCamera shakeCamera;
-    [SerializeField] private Camera cam;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            shakeCamera.StartCameraShake(1, 0.05f, 1, cam.transform, cam.transform.localPosition);
+    [SerializeField] private Camera cam;
+    public float shakeDuration;
+    public float shakeMagnitude;
+    public float decreaseFactor;
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.E)) {
+            ShakeCamera.StartCameraShake(shakeDuration, shakeMagnitude, decreaseFactor, cam.transform, cam.transform.localPosition);
         }
     }
 }

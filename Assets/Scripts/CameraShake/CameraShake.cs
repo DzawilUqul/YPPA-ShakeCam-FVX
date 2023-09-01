@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
+
     // Transform of the camera to shake. Grabs the gameObject's transform
     
     public Transform camTransform;
@@ -34,7 +35,7 @@ public class CameraShake : MonoBehaviour
     void Update() {
 
         if (Input.GetKeyDown(KeyCode.Space)) {
-            shakeCamera.StartCameraShake(duration, magnitude, decreaseFactor, camTransform, originalPos);
+            ShakeCamera.StartCameraShake(duration, magnitude, decreaseFactor, camTransform, originalPos);
         }
 
     }
