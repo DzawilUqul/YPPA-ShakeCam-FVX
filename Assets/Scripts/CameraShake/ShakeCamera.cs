@@ -11,13 +11,12 @@ public class ShakeCamera : MonoBehaviour
 
     IEnumerator Shake(float duration, float magnitude, float decreaseFactor, Transform camTransform, Vector3 camOriginalPos)
     {
-        float elapsed = 0.0f;
-        while (elapsed < duration)
+        //float elapsed = 0.0f;
+        while (duration > 0)
         {
             Vector3 newPos = camOriginalPos + Random.insideUnitSphere * magnitude;
             camTransform.localPosition = newPos;
-
-            elapsed += Time.deltaTime;
+            duration -= Time.deltaTime;
 
             yield return null;
         }
