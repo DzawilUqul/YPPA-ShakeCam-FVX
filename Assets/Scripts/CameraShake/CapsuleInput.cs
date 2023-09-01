@@ -6,12 +6,13 @@ public class CapsuleInput : MonoBehaviour
 {
 
     [SerializeField] private Camera cam;
-    public float shakeDuration;
-    public float shakeMagnitude;
-    public float decreaseFactor;
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.E)) {
-            ShakeCamera.StartCameraShake(shakeDuration, shakeMagnitude, decreaseFactor, cam.transform, cam.transform.localPosition);
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            CinemachineShake.Instance.shakeCamera(3f, 0.25f);
+            // shakeCamera.StartCameraShake(1, 0.05f, 1, cam.transform, cam.transform.localPosition);
         }
     }
 }
