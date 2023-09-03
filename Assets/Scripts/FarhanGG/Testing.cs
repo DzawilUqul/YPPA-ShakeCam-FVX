@@ -6,6 +6,10 @@ public class Testing : MonoBehaviour
     //public VFXController vFXController;
     public ParticleSystem vfxPrefab; // Reference to the VFX prefab
     public Transform spawnPoint;   // Position to spawn the VFX
+    public float speedMultiplier = 1.0f;
+    public float duration = 2.0f;
+    public float scaleFactor = 1.0f;
+    //public bool isLooping;
 
     // Update is called once per frame
     void Update()
@@ -14,7 +18,7 @@ public class Testing : MonoBehaviour
         {
             Debug.Log("Space key was pressed.");
             //call the function from the VFXController script
-            VFXController.SpawnAndPlayVFX(vfxPrefab, spawnPoint);
+            VFXController.SpawnAndPlayVFX(vfxPrefab, spawnPoint, speedMultiplier, duration, scaleFactor);
         }
     }
 }
