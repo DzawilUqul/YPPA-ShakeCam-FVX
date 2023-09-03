@@ -5,22 +5,16 @@ using UnityEngine.VFX;
 
 public class VFXController : MonoBehaviour
 {
-    public ParticleSystem vfxPrefab; // Reference to the VFX prefab
-    public Transform spawnPoint;   // Position to spawn the VFX
-    private ParticleSystem vfxInstance; // Reference to the spawned VFX instance
-
-    void Update()
+    public static VFXController instance;
+    void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnAndPlayVFX();
-        }
+        instance = this;
     }
 
-    void SpawnAndPlayVFX()
+    public void SpawnAndPlayVFX(ParticleSystem vfxPrefab, Transform spawnPoint)
     {
-        // Spawn the VFX prefab at the spawnPoint position
-        vfxInstance = Instantiate(vfxPrefab, spawnPoint.position, Quaternion.identity);
+        // Reference to the spawned VFX instance
+        ParticleSystem vfxInstance = Instantiate(vfxPrefab, spawnPoint.position, Quaternion.identity); // Spawn the VFX prefab at the spawnPoint position
 
         // Play the spawned VFX
         vfxInstance.Play();
