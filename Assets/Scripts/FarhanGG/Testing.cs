@@ -14,7 +14,7 @@ public class Testing : MonoBehaviour
         {
             Debug.Log("Space key was pressed.");
             //call the function from the VFXController script
-            VFXController.instance.SpawnAndPlayVFX(vfxPrefab, spawnPoint);
+            VFXController.SpawnAndPlayVFX(vfxPrefab, spawnPoint);
         }
     }
 }

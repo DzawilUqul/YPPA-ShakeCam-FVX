@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c867b49d3097f347840631a9e5cc723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxPrefab: {fileID: 19800004, guid: 7e9c50938e32351438a7df9ccad2f2a5, type: 3}
+  vfxPrefab: {fileID: 6693495953547381807, guid: 8198d723992ba2f41a4984e10157b743, type: 3}
   spawnPoint: {fileID: 1512560594}
 --- !u!1 &946017508
 GameObject:
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c867b49d3097f347840631a9e5cc723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxPrefab: {fileID: 19800002, guid: 00fedc70b62a31e448e8ccc298257b56, type: 3}
+  vfxPrefab: {fileID: 6693495953547381807, guid: 8198d723992ba2f41a4984e10157b743, type: 3}
   spawnPoint: {fileID: 430355530}
 --- !u!1 &1462098119
 GameObject:
@@ -1120,7 +1120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1736863200
 MonoBehaviour:
   m_ObjectHideFlags: 0
