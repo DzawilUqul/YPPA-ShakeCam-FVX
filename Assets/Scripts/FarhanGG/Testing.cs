@@ -11,6 +11,7 @@ public class Testing : MonoBehaviour
     public float scaleFactor = 1.0f;
     //public bool isLooping;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -21,4 +22,29 @@ public class Testing : MonoBehaviour
             VFXController.SpawnAndPlayVFX(vfxPrefab, spawnPoint, speedMultiplier, duration, scaleFactor);
         }
     }
+
+    //Floating Text
+    /*
+    Class EnemyHealth/PlayerHealth
+    {
+        void TakeDamage()
+        {
+            ... //Do damage
+
+            if (floatingTextPrefab && currentHealth > 0)
+            {
+                ShowFloatingText(); 
+            }
+
+         ..//isDead
+        }
+
+        void ShowFloatingText() //Masukkan codingan ke prefab player/enemy
+        {
+            var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform); //Instantiate the text
+            go.GetComponent<TextMesh>().text = currentHealth.ToString(); //Set the text to the current health
+        }
+
+     }
+     */
 }
